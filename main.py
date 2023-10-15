@@ -53,7 +53,7 @@ async def get_weather(message: types.Message):
                             f"Время восхода солнца: {datetime.fromtimestamp(sun_info['sunrise']).strftime('%H:%M:%C')}\n"
                             f"Время захода солнца: {datetime.fromtimestamp(sun_info['sunset']).strftime('%H:%M:%C')}\n"
                             f"Продолжительность дня: {datetime.fromtimestamp(sun_info['sunset']) - datetime.fromtimestamp(sun_info['sunrise'])}\n\n\n"
-            f"--------Хорошего дня!--------")
+            f"--------Хорошего дня!--------",parse_mode=HTML)
     except:
         await message.reply(f"Введено некоректное название города!\nПровертье правильность ввода!")
 
